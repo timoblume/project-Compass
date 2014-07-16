@@ -1,0 +1,32 @@
+footer{
+	
+	.navbar{
+		margin-top:70px;
+
+		min-height: 70px;
+		margin-bottom:0px;
+		border:none;
+		border-radius:0px;
+		background-color:$secondary-color;
+		.container{
+			margin-top:10px;
+		}
+
+	}
+}
+
+html, body{
+	height:100%;
+
+}
+.wrapper{
+	min-height:100%;
+	margin-bottom:-140px;
+	&:after{
+		content: "";
+		display:block;
+	}
+}
+.wrapper:after, footer.navbar{
+	height:70px;
+}

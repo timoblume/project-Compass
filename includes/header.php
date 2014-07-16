@@ -1,0 +1,3 @@
+<header>
+	<?php include 'includes/menu.php'; ?>
+</header>

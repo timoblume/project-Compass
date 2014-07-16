@@ -1,0 +1,35 @@
+.navbar{
+
+	min-height: 70px;
+	margin-bottom:0px;
+	border:none;
+	border-radius:0px;
+	background-color:$primary-color;
+	.container{
+		margin-top:10px;
+	}
+
+}
+
+.navbar-form {
+	padding-left:0px;
+}
+#search{
+	background-color:#fff;
+	border:none;
+	border-radius:20px;
+}
+.navbar-default .navbar-nav>li>a{
+		color:#fff;
+
+	}
+#logo{
+	position:absolute;
+	left:50%;
+	margin-left: -82px;
+}
+
+.navbar-nav>li>a.dropdown-toggle{
+	padding:0px;
+	margin-left:20px;
+}

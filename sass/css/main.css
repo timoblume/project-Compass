@@ -1,0 +1,207 @@
+@import url("bootstrap/css/bootstrap.min.css");
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #eee; }
+
+h1, h2, h3, h4 {
+  font-family: 'Cabin', sans-serif; }
+
+footer .navbar {
+  margin-top: 70px;
+  min-height: 70px;
+  margin-bottom: 0px;
+  border: none;
+  border-radius: 0px;
+  background-color: #818181; }
+  footer .navbar .container {
+    margin-top: 10px; }
+
+html, body {
+  height: 100%; }
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -140px; }
+  .wrapper:after {
+    content: "";
+    display: block; }
+
+.wrapper:after, footer.navbar {
+  height: 70px; }
+
+.navbar {
+  min-height: 70px;
+  margin-bottom: 0px;
+  border: none;
+  border-radius: 0px;
+  background-color: #f14e57; }
+  .navbar .container {
+    margin-top: 10px; }
+
+.navbar-form {
+  padding-left: 0px; }
+
+#search {
+  background-color: #fff;
+  border: none;
+  border-radius: 20px; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff; }
+
+#logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -82px; }
+
+.navbar-nav > li > a.dropdown-toggle {
+  padding: 0px;
+  margin-left: 20px; }
+
+.ghost {
+  background-color: none;
+  border: 3px solid #fff;
+  color: #fff; }
+  .ghost:hover {
+    border-color: #f14e57;
+    color: #f14e57; }
+
+.ghost-subscribe {
+  background-color: none;
+  border: 3px solid #f14e57;
+  color: #f14e57; }
+  .ghost-subscribe:hover {
+    border-color: #f14e57;
+    color: #f14e57; }
+
+.login-button {
+  background-color: #fff;
+  border-right: 3px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  border-top: none;
+  border-left: none; }
+  .login-button:hover {
+    background-color: #fff;
+    border-right: 3px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    border-top: none;
+    border-left: none; }
+
+.btn-primary {
+  background-color: #f14e57;
+  border-right: 3px solid #ca424b;
+  border-bottom: 3px solid #ca424b;
+  border-radius: 5px;
+  border-top: none;
+  border-left: none; }
+  .btn-primary:hover {
+    background-color: #ca424b;
+    border-right: 3px solid #ca424b;
+    border-bottom: 3px solid #ca424b;
+    border-radius: 5px;
+    border-top: none;
+    border-left: none; }
+
+.twitter {
+  background-color: #6ebad7;
+  border-right: 3px solid #46a7cb;
+  border-bottom: 3px solid #46a7cb;
+  border-radius: 5px;
+  border-top: none;
+  border-left: none;
+  color: #fff; }
+  .twitter:hover {
+    background-color: #46a7cb;
+    border-right: 3px solid #46a7cb;
+    border-bottom: 3px solid #46a7cb;
+    border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    color: #fff; }
+
+.jumbotron {
+  background-image: url("../../images/header.jpg");
+  background-size: cover;
+  height: 600px;
+  color: #fff; }
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none; }
+
+.form-control::-webkit-input-placeholder {
+  color: grey; }
+
+.placeholder-small {
+  height: 20px; }
+
+.placeholder-medium {
+  height: 40px; }
+
+.placeholder-large {
+  height: 60px; }
+
+ul#category-list {
+  list-style-type: none;
+  background-color: #fff;
+  border-radius: 15px;
+  margin-top: 20px;
+  border-right: 3px solid #dddddd;
+  border-bottom: 3px solid #dddddd;
+  padding-left: 0px;
+  overflow: hidden; }
+  ul#category-list li#add-category {
+    background-color: #f14e57;
+    text-align: center;
+    padding-left: 0px;
+    font-size: 1.2em; }
+    ul#category-list li#add-category a {
+      color: #fff; }
+  ul#category-list .active {
+    background-color: #f14e57; }
+    ul#category-list .active a {
+      color: #fff; }
+  ul#category-list li {
+    padding: 10px;
+    padding-left: 20px; }
+    ul#category-list li a {
+      font-weight: 300;
+      color: #333;
+      font-family: Lato;
+      text-decoration: none;
+      font-size: 1.2em; }
+
+.bookmark {
+  background-color: #fff;
+  border-radius: 15px;
+  margin-top: 20px;
+  border-right: 3px solid #dddddd;
+  border-bottom: 3px solid #dddddd;
+  margin-right: 15px; }
+  .bookmark .favicon {
+    margin-right: 10px; }
+  .bookmark hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: -15px;
+    margin-right: -15px; }
+  .bookmark footer {
+    height: 60px; }
+    .bookmark footer a {
+      margin-top: 10px; }
+
+.landingpage-row {
+  margin-bottom: 40px; }
+
+.crop {
+  height: 50px;
+  width: 50px;
+  overflow: hidden; }
+  .crop img {
+    width: 100%;
+    height: 100%; }
+
+a {
+  color: #f14e57; }

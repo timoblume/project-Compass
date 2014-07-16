@@ -1,0 +1,77 @@
+.ghost{
+	background-color:none;
+	border: 3px solid #fff;
+	color:#fff;
+
+	&:hover{
+		border-color:$primary-color;
+		color:$primary-color;
+	}
+}
+
+.ghost-subscribe{
+	background-color:none;
+	border: 3px solid $primary-color;
+	color:$primary-color;
+
+	&:hover{
+		border-color:$primary-color;
+		color:$primary-color;
+	}
+}
+
+.login-button{
+	background-color:#fff;
+	border-right: 3px solid rgba(255,255,255,0.7);
+	border-bottom: 3px solid rgba(255,255,255,0.7);
+	border-radius: 5px;
+	border-top:none;
+	border-left:none;
+
+	&:hover{
+		background-color:#fff;
+	border-right: 3px solid rgba(255,255,255,0.7);
+	border-bottom: 3px solid rgba(255,255,255,0.7);
+	border-radius: 5px;
+	border-top:none;
+	border-left:none;
+	}
+}
+
+.btn-primary{
+	background-color:$primary-color;
+	border-right: 3px solid $primary-color-dark;
+	border-bottom: 3px solid $primary-color-dark;
+	border-radius: 5px;
+	border-top:none;
+	border-left:none;
+
+	&:hover{
+		background-color:$primary-color-dark;
+		border-right: 3px solid $primary-color-dark;
+		border-bottom: 3px solid $primary-color-dark;
+		border-radius: 5px;
+		border-top:none;
+		border-left:none;
+	}
+}
+
+.twitter{
+	background-color:$twitter-color;
+	border-right: 3px solid $twitter-color-dark;
+	border-bottom: 3px solid $twitter-color-dark;
+	border-radius: 5px;
+	border-top:none;
+	border-left:none;
+	color:#fff;
+
+	&:hover{
+		background-color:$twitter-color-dark;
+		border-right: 3px solid $twitter-color-dark;
+		border-bottom: 3px solid $twitter-color-dark;
+		border-radius: 5px;
+		border-top:none;
+		border-left:none;
+		color:#fff;
+	}
+}
