@@ -145,9 +145,9 @@ function user_data($user_id) {
 	}
 }
 
-function category_data($user_id) {
+function category_data($category_id) {
 	$data = array();
-	$user_id = (int)$user_id;
+	$cat_id = (int)$category_id;
 	
 	$func_num_args = func_num_args();
 	$func_get_args = func_get_args();
@@ -156,7 +156,7 @@ function category_data($user_id) {
 		unset($func_get_args[0]);
 		
 		$fields = '`' . implode('`, `', $func_get_args) . '`';
-		$data = mysql_fetch_assoc(mysql_query("SELECT $fields FROM `categories` WHERE `user_id` = $user_id"));
+		$data = mysql_fetch_assoc(mysql_query("SELECT $fields FROM `categories` WHERE `category_id` = $cat_id"));
 		
 		return $data;
 	}

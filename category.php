@@ -29,7 +29,13 @@
 
 	$result = mysql_query("SELECT * FROM bookmarks WHERE $category_id = category");
 
+	$id = $user_data['user_id'];
+	$category_data = category_data($category_id,'title','description');
+
 	$output = "";
+
+	$output = $output . "<h1>" . $category_data['title']  . "</h1>";
+	$output = $output . "<p>" . $category_data['description'] . "</p>";
 
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
 		
