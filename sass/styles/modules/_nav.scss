@@ -14,10 +14,29 @@
 .navbar-form {
 	padding-left:0px;
 }
+
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+.right-inner-addon span {
+	color:$primary-color;
+    position: absolute;
+    right: 0px;
+    font-size: 1.8em;
+    padding:10px 20px;
+    pointer-events: none;
+}
+
 #search{
 	background-color:#fff;
 	border:none;
-	border-radius:20px;
+	border-radius:25px;
+	margin-top: 2px;
+	width:400px;
+	height:45px;
 }
 .navbar-default .navbar-nav>li>a{
 		color:#fff;

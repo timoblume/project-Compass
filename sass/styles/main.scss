@@ -25,6 +25,11 @@
 
 a{
 	color:$primary-color;
+
+	&:hover{
+		color:$secondary-color;
+		text-decoration:none;
+	}
 }
 
 

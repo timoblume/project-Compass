@@ -44,11 +44,14 @@
         <span class="icon-bar"></span>
       </button>
 <a href="index.php"><img src="images/logo.png" height="50" id="logo"></a>
+<div class="right-inner-addon ">
+<span class="glyphicon glyphicon-search"></span>
      <form action="search.php" method="get" role="form">
         <div class="form-group">
-          <input type="text" id="search" class="form-control" name="keywords" autocomplete="off" placeholder="Suche">
+          <input type="text" id="search" class="form-control" name="keywords" autocomplete="off">
         </div>
       </form>
+</div>
       
     </div>
 
