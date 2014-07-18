@@ -27,6 +27,8 @@
 	$result = mysql_query("SELECT title FROM categories WHERE $category_id = category_id");
 	$category_title = mysql_result($result,0);
 
+	// bookmarks query 
+
 	$result = mysql_query("SELECT * FROM bookmarks WHERE $category_id = category");
 
 	$id = $user_data['user_id'];
@@ -34,13 +36,37 @@
 
 	$output = "";
 
+	//Title and description
+
 	$output = $output . "<h1>" . $category_data['title']  . "</h1>";
 	$output = $output . "<p>" . $category_data['description'] . "</p>";
+
+	// Outputting the tags relative to the category
+
+	$tags = mysql_query("SELECT tags FROM bookmarks WHERE category = $category_id");
+	
+		$i = 0;
+		$output = $output  . "<div class='recent-tags'>";
+		while (($row = mysql_fetch_array($tags, MYSQL_ASSOC)) && ($i <= 4)) {
+
+			$tag = trim($row['tags']);
+			$exploded = explode(' ', $tag);
+			foreach($exploded as $value){
+				
+				$output = $output . "<p class='tag'>" . $value . "</p>";
+
+				$i++;
+			}
+			
+		}
+		$output = $output  . "</div>";
+
+	//Output all related Bookmarks
 
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
 		
 		
-		$output = $output . "<div class='col-md-3 bookmark'>";
+		$output = $output . "<div class='col-md-3 bookmark " . $row['tags'] ."'>";
 		$output =  $output . "<header><h4>";
 		$output =  $output . "<img class='favicon' src='" . "http://www.google.com/s2/favicons?domain=" . $row['url'] . "'>" ;
 		$output =  $output  . $row['title'] . "</h4></header>";

@@ -9,5 +9,11 @@ p.tag{
 	padding:10px;
 	border-radius: 15px;
 	
+	&over{
+		cursor: pointer !important;
+	}
 	
+}
+p.tag.active{
+	background-color:$primary-color;
 }

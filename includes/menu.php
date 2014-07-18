@@ -60,9 +60,9 @@
 
       <ul class="nav navbar-nav navbar-right">
 
-        <li><a href="add_bookmark.php">Add</a></li>
+        <li><a href="add_bookmark.php" id="add_bookmark"><span class="glyphicon glyphicon-plus"</span></a></li>
 
-        <li><a href="#">Notifications</a></li>
+        <li><a href="#" id="notifications"><span class="glyphicon glyphicon-envelope"</span></a></li>
 
        
 

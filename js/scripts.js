@@ -24,4 +24,18 @@ $("p.tag").click(function(){
 	
 })
 
+// Filtering the output
+
+
+$("p.tag").click(function(){
+	content = $(this).html(); 
+	console.log(content);
+
+	$(this).toggleClass('active');
+	$(".bookmark:not('." + content +"')").toggleClass('hide');
+
+})
+
+
+
 });
