@@ -15,9 +15,10 @@ function store_bookmark($bookmark_data){
 function store_category($category_data){
 	$fields = '`' . implode('`, `', array_keys($category_data)) . '`';
 	$data = '\'' . implode('\', \'', $category_data) . '\'';
-	mysql_query("INSERT INTO `categories` ($fields) VALUES ($data)");
+	mysql_query("INSERT INTO `categories` ($fields) VALUES ($data)"); 
 
 }
+
 
 function display_bookmarks($parameter){ 
 	if(logged_in()){
@@ -157,6 +158,33 @@ function category_data($category_id) {
 		
 		$fields = '`' . implode('`, `', $func_get_args) . '`';
 		$data = mysql_fetch_assoc(mysql_query("SELECT $fields FROM `categories` WHERE `category_id` = $cat_id"));
+		
+		return $data;
+	}
+}
+
+function output_tags($user_id){
+		$id = $user_id;
+				$result = mysql_query("SELECT tags FROM bookmarks WHERE user_id = $id");
+				$output = "";
+				while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+					$output = $output . "<p class='tag'>" . $row['tags'] . "</p>";
+					echo $output;
+				}
+}
+
+function bookmark_data($bookmark_id) {
+	$data = array();
+	$cat_id = (int)$bookmark_id;
+	
+	$func_num_args = func_num_args();
+	$func_get_args = func_get_args();
+	
+	if ($func_num_args > 1) {
+		unset($func_get_args[0]);
+		
+		$fields = '`' . implode('`, `', $func_get_args) . '`';
+		$data = mysql_fetch_assoc(mysql_query("SELECT $fields FROM `bookmarks` WHERE `bookmark_id` = $bookmark_id"));
 		
 		return $data;
 	}

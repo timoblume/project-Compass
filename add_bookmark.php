@@ -24,6 +24,7 @@ if (empty($_POST) === false && empty($errors) === true) {
 		store_bookmark($bookmark_data);
 		echo "<script>window.top.location='add_bookmark.php?success'</script>";
 	
+
 }			
 ?>
 
@@ -42,12 +43,18 @@ if (empty($_POST) === false && empty($errors) === true) {
 					<label for="description">Description</label>
 					<input type="text" class="form-control" name="description" id="description">
 				</div>
+
+
 				<div class="form-group">
 					<label for="category">Tags</label>
-					<input type="text" class="form-control" name="tags" id="tags">
+					<input type="text" id="tag-input" class="form-control" name="tags" id="tags">
 				</div>
 			
-				<input type="submit" value="Save Bookmark" class="btn btn-default">
+				<?php  
+					output_tags($user_data['user_id']);
+				 ?>
+
+				<input type="submit" value="Save Bookmark" class="btn btn-primary">
 			</form>
 		</div>
 	</div>
