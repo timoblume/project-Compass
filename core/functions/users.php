@@ -167,11 +167,23 @@ function output_tags($user_id){
 		$id = $user_id;
 				$result = mysql_query("SELECT tags FROM bookmarks WHERE user_id = $id");
 				$output = "";
-				while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-					$output = $output . "<p class='tag'>" . $row['tags'] . "</p>";
-					echo $output;
+				$i = 0;
+				while (($row = mysql_fetch_array($result, MYSQL_ASSOC)) && ($i <= 4)) {
+
+					$tag = trim($row['tags']);
+					$exploded = explode(' ', $tag);
+					foreach($exploded as $value){
+						$output = $output . "<p class='tag'>" . $value . "</p>";
+
+						$i++;
+					}
+					
 				}
-}
+
+					
+				echo $output;
+			}
+
 
 function bookmark_data($bookmark_id) {
 	$data = array();
