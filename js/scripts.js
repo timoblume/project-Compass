@@ -35,7 +35,22 @@ $("p.tag").click(function(){
 	$(".bookmark:not('." + content +"')").toggleClass('hide');
 
 })
+/*
+Own Expand Function, Bootstrap solution is better
 
+$("#expand-bookmark").click(function(){
+	$(this).parent().find('.url-container').removeClass('hide');
+})
+*/
 
+$(".bookmark-expand").click(function(){
+	if ($(this).parents('.bookmark').length) {
+
+		$(this).toggleClass('glyphicon-chevron-down');
+		$(this).toggleClass('glyphicon-chevron-up');
+
+		$(this).parents('.bookmark').toggleClass('open');
+}
+})
 
 });

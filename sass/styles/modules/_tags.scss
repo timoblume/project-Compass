@@ -8,12 +8,23 @@ p.tag{
 	background-color:$tag-color;
 	padding:10px;
 	border-radius: 15px;
+	margin-right:5px;
 	
-	&over{
-		cursor: pointer !important;
+	&:hover{
+		cursor: pointer;
 	}
 	
 }
+
+p.tag-no-filter{
+	float:left;
+
+	background-color:$tag-color;
+	padding:10px;
+	border-radius: 15px;
+	margin-right:5px;
+}
+
 p.tag.active{
 	background-color:$primary-color;
 }

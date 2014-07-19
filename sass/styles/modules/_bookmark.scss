@@ -1,10 +1,14 @@
+
 .bookmark{
+	transition: all 0.4s ease 0s;
+	margin-right:19px;
 	background-color: #fff;
 	border-radius:15px;
 	margin-top:20px;
 	border-right: 3px solid $drop-shadow-color;
 	border-bottom: 3px solid $drop-shadow-color;
-	margin-right:15px;
+	position:relative;
+
 	.favicon{
 		margin-right:10px;
 	}
@@ -22,6 +26,50 @@
 			margin-top:10px;
 		}
 	}
+}
+// position bookmark with negative margins
+.bookmark.open{
+	transition: all 0.4s ease 0s;
+	margin-right:-30px;
+	margin-bottom:-200px;
+	z-index:5000;
+	width: 35%;
+}
+
+.tags{
+	margin-bottom:20px;
+}
+
+.url-container{
+	width:100%;
+	background-color: $drop-shadow-color;
+	margin-bottom:10px;
+	padding:10px;
+	border-radius:15px;
+	float:left;
+}
+.panel-group{
+
+	margin-bottom:0px;
+
+	.panel{
+		box-shadow: none;
+	}
+
+	.panel-default{
+		border:none;
+		background-color:#fff;
+		.panel-heading{
+			background-color:#fff;
+		}
+		.panel-collapse{
+			.panel-body{
+				border-top:none;
+				padding-top:0px;
+			}
+		}
+
+	}	
 }
 
 .hide{
