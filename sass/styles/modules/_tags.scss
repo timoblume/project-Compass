@@ -25,6 +25,19 @@ p.tag-no-filter{
 	margin-right:5px;
 }
 
-p.tag.active{
+p.tag-filter.active{
 	background-color:$primary-color;
+}
+
+p.tag-filter{
+	float:left;
+
+	background-color:$tag-color;
+	padding:10px;
+	border-radius: 15px;
+	margin-right:5px;
+	&:hover{
+		cursor: pointer;
+	}
+	
 }
