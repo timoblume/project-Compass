@@ -33,6 +33,21 @@
 	}
 }
 
+.friend-finder{
+	border-right: 3px solid $drop-shadow-color;
+	border-bottom: 3px solid $drop-shadow-color;
+	margin-top:20px;
+	height:150px;
+	background-color: #fff;
+	border-radius:15px;
+	padding-top:10px;
+	margin-right:19px;
+
+	a{
+		margin-bottom:10px;
+	}
+}
+
 .hidden-user{
 	display:none;
 }
