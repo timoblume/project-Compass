@@ -14,7 +14,7 @@ function get_categories($parameter){
 		$output = "";
 
 
-		$output = $output . "<ul id='category-list'>";
+		$output = $output . "<ul id='category-list' class='ui-widget-header'>";
 
 		while($row = mysql_fetch_array($result, MYSQL_ASSOC)){ 
 			 
@@ -24,7 +24,7 @@ function get_categories($parameter){
 					$active = 'not-active';
 				}
 
-			$output = $output . '<li class="' . $active . ' ui-state-default"><a href="category.php?id=' . $row['category_id'] . '">' . $row[$parameter] . '</a></li>';
+			$output = $output . '<li class="' . $active . ' ui-state-default droppable"><a href="category.php?id=' . $row['category_id'] . '">' . $row[$parameter] . '</a></li>';
 
 		} 
 

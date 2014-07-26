@@ -6,6 +6,72 @@ body {
 h1, h2, h3, h4 {
   font-family: 'Cabin', sans-serif; }
 
+p.infotext, p.description {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1.2em; }
+
+.category-title {
+  float: left;
+  margin-right: 10px; }
+
+.description {
+  clear: both; }
+
+.from-user {
+  margin-top: 36px; }
+
+.inner-wrapper {
+  background-color: #fff; }
+
+@media (min-width: 992px) {
+  .col-md-4 {
+    width: 30.333333%; } }
+#wrapper {
+  padding-left: 260px;
+  transition: all 0.4s ease 0s; }
+
+#sidebar-wrapper {
+  margin-left: -250px;
+  left: 250px;
+  width: 300px;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s; }
+
+#page-content-wrapper {
+  width: 100%; }
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  left: 50px; }
+
+.inset {
+  padding-left: 100px;
+  padding-right: 35px; }
+
+@media (max-width: 767px) {
+  #wrapper {
+    padding-left: 0; }
+
+  #sidebar-wrapper {
+    left: 0; }
+
+  #wrapper.active {
+    position: relative;
+    left: 250px; }
+
+  #wrapper.active #sidebar-wrapper {
+    left: 250px;
+    width: 250px;
+    transition: all 0.4s ease 0s; } }
 footer .navbar {
   margin-top: 70px;
   min-height: 70px;
@@ -37,14 +103,45 @@ html, body {
   background-color: #f14e57; }
   .navbar .container {
     margin-top: 10px; }
+  .navbar #add_bookmark {
+    font-size: 1.8em; }
+  .navbar #notifications {
+    font-size: 1.8em; }
+
+.container.welcome {
+  margin-top: 0px; }
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px; }
 
 .navbar-form {
   padding-left: 0px; }
 
+.right-inner-addon {
+  position: relative; }
+
+.right-inner-addon input {
+  padding-right: 30px; }
+
+.right-inner-addon span {
+  color: #f14e57;
+  position: absolute;
+  right: 0px;
+  font-size: 1.8em;
+  padding: 10px 20px;
+  pointer-events: none; }
+
 #search {
   background-color: #fff;
   border: none;
-  border-radius: 20px; }
+  border-radius: 25px;
+  margin-top: 2px;
+  width: 400px;
+  height: 45px; }
 
 .navbar-default .navbar-nav > li > a {
   color: #fff; }
@@ -80,7 +177,8 @@ html, body {
   border-bottom: 3px solid rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   border-top: none;
-  border-left: none; }
+  border-left: none;
+  margin-top: 6px; }
   .login-button:hover {
     background-color: #fff;
     border-right: 3px solid rgba(255, 255, 255, 0.7);
@@ -124,6 +222,7 @@ html, body {
 .jumbotron {
   background-image: url("../../images/header.jpg");
   background-size: cover;
+  background-attachment: fixed;
   height: 600px;
   color: #fff; }
 
@@ -172,14 +271,18 @@ ul#category-list {
       font-family: Lato;
       text-decoration: none;
       font-size: 1.2em; }
+  ul#category-list .ui-state-hover {
+    background-color: #f14e57; }
 
 .bookmark {
+  transition: all 0.4s ease 0s;
+  margin-right: 19px;
   background-color: #fff;
   border-radius: 15px;
   margin-top: 20px;
   border-right: 3px solid #dddddd;
   border-bottom: 3px solid #dddddd;
-  margin-right: 15px; }
+  position: relative; }
   .bookmark .favicon {
     margin-right: 10px; }
   .bookmark hr {
@@ -190,7 +293,130 @@ ul#category-list {
   .bookmark footer {
     height: 60px; }
     .bookmark footer a {
-      margin-top: 10px; }
+      margin-top: 10px;
+      margin-left: 15px; }
+    .bookmark footer .category-link {
+      float: left;
+      margin-top: 12px; }
+
+.friend-finder {
+  border-right: 3px solid #dddddd;
+  border-bottom: 3px solid #dddddd;
+  margin-top: 20px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding-top: 10px;
+  margin-right: 19px; }
+  .friend-finder a {
+    margin-bottom: 10px; }
+
+.hidden-user {
+  display: none; }
+
+.dropped {
+  background-color: #a8cf4c; }
+
+.bookmark-expand {
+  margin-bottom: 10px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); }
+
+a.toPage {
+  color: #333; }
+  a.toPage:hover {
+    color: #818181;
+    cursor: pointer; }
+
+.ui-draggable-dragging {
+  z-index: 5000;
+  background-color: #fff;
+  border-right: 3px solid #dddddd;
+  border-bottom: 3px solid #dddddd;
+  padding: 20px;
+  border-radius: 15px; }
+
+.overlay {
+  visibility: hidden;
+  position: absolute;
+  right: 15px;
+  top: 15px; }
+
+.bookmark.open {
+  border-right: 5px solid #818181;
+  border-bottom: 5px solid #818181;
+  transition: all 0.4s ease 0s;
+  margin-right: -30px;
+  margin-bottom: -200px;
+  z-index: 5000;
+  width: 35%; }
+
+.tags {
+  margin-bottom: 20px; }
+
+.url-container {
+  width: 100%;
+  background-color: #dddddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  float: left; }
+
+.panel-group {
+  overflow: visible;
+  margin-bottom: 0px; }
+  .panel-group .panel {
+    box-shadow: none;
+    overflow: visible; }
+  .panel-group .panel-default {
+    overflow: visible;
+    border: none;
+    background-color: #fff; }
+    .panel-group .panel-default .panel-heading {
+      background-color: #fff; }
+    .panel-group .panel-default .panel-collapse .panel-body {
+      overflow: visible;
+      border-top: none;
+      padding-top: 0px; }
+      .panel-group .panel-default .panel-collapse .panel-body hr {
+        margin-left: -30px;
+        margin-right: -30px; }
+
+.hide {
+  display: none; }
+
+.recent-tags {
+  height: 50px; }
+
+p.tag {
+  float: left;
+  background-color: #dddddd;
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: 5px; }
+  p.tag:hover {
+    cursor: pointer; }
+
+p.tag-no-filter {
+  float: left;
+  background-color: #dddddd;
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: 5px; }
+
+p.tag-filter.active {
+  background-color: #f14e57; }
+
+p.tag-filter {
+  float: left;
+  background-color: #dddddd;
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: 5px; }
+  p.tag-filter:hover {
+    cursor: pointer; }
 
 .landingpage-row {
   margin-bottom: 40px; }
@@ -205,3 +431,6 @@ ul#category-list {
 
 a {
   color: #f14e57; }
+  a:hover {
+    color: #818181;
+    text-decoration: none; }

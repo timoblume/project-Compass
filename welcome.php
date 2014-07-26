@@ -1,9 +1,11 @@
+<div class="inner-wrapper">
 <div class="jumbotron">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7">
 					<h1>Compass</h1>
 					<p class="lead">
+					  Lesezeichen sind ein toller Weg interessante Inhalte schnell wiederzufinden.
 					  At vero eos et accusam et justo duo dolores et ea rebum.
 					  Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 					  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
@@ -59,7 +61,7 @@
 							  </div>
 							  <div class="form-group">
 							    <div class="col-sm-offset-2 col-sm-10">
-							      <button type="submit" class="btn btn-default">Login</button>
+							      <button type="submit" class="btn btn-primary">Login</button>
 							    </div>
 							  </div>
 							  <div class="form-group">
@@ -76,12 +78,13 @@
 
 	<div class="container">
 		<div class="row landingpage-row">
+		<div class="placeholder-large"></div>
 			<div class="col-md-4">
-				<img src="images/example-img.jpg" class="img-responsive">
+				<img src="images/organisieren.png" height="300">
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-6 col-md-offset-1">
 			<h2>Lesezeichen organisieren</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+			<p class="infotext">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 			 sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
 			  sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 			  Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -93,9 +96,9 @@
 		</div>
 		<div class="row landingpage-row">
 			
-			<div class="col-md-8">
-			<h2>Lesezeichen organisieren</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+			<div class="col-md-6 col-md-offset-1">
+			<h2>Weitersagen</h2>
+			<p class="infotext">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 			 sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
 			  sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 			  Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -104,17 +107,17 @@
 			  sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita 
 			  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 			</div>
-			<div class="col-md-4">
-				<img src="images/example-img.jpg" class="img-responsive">
+			<div class="col-md-4 col-md-offset-1">
+				<img src="images/share.png" height="300">
 			</div>
 		</div>
 		<div class="row landingpage-row">
-			<div class="col-md-4">
-				<img src="images/example-img.jpg" class="img-responsive">
+			<div class="col-md-4 ">
+				<img src="images/herz.png" height="300">
 			</div>
-			<div class="col-md-8">
-			<h2>Lesezeichen organisieren</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+			<div class="col-md-6 col-md-offset-1">
+			<h2>Neue Inhalte entdecken</h2>
+			<p class="infotext">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 			 sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
 			  sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 			  Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -127,3 +130,4 @@
 
 	</div>
 	<div class="placeholder-large"></div>
+	</div>

@@ -3,7 +3,16 @@
 function follow_user(){
 
 }
+function subscribtion_id_from_subscriber_id($user_id){
+	return mysql_result(mysql_query("SELECT `subscription_id` FROM `subscriptions` WHERE `subscriber_id` = '$user_id'"), 0, 'subscription_id');
+}
 
+function cat_id_from_title($title){
+	return mysql_result(mysql_query("SELECT `category_id` FROM `categories` WHERE `title` = '$title'"), 0, 'category_id');
+}
+function cat_title_from_id($id){
+	return mysql_result(mysql_query("SELECT `title` FROM `categories` WHERE `category_id` = '$id'"), 0, 'title');
+}
 function store_bookmark($bookmark_data){
 	// works!
 	$fields = '`' . implode('`, `', array_keys($bookmark_data)) . '`';
@@ -162,6 +171,7 @@ function category_data($category_id) {
 		return $data;
 	}
 }
+
 
 function output_tags($user_id){
 		$id = $user_id;

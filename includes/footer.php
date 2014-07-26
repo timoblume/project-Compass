@@ -1,4 +1,6 @@
 </div> <!-- End Wrapper-->
+
+<div class="placeholder-large"></div>
 <footer>
 	<nav class="navbar navbar-default" role="navigation">
 	  <div class="container">

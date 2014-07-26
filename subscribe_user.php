@@ -8,6 +8,7 @@ include 'includes/overall/header.php';
 
 		mysql_query("INSERT INTO subscriptions (subscriber_id, subscription_id) VALUES ($subscriber, $subscription)");
 		echo "success!";
+
 		
 		}else{
 			echo "something went wrong...";

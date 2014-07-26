@@ -27,7 +27,7 @@ $("p.tag").click(function(){
 // Filtering the output
 
 
-$("p.tag").click(function(){
+$("p.tag-filter").click(function(){
 	content = $(this).html(); 
 	console.log(content);
 
@@ -52,5 +52,47 @@ $(".bookmark-expand").click(function(){
 		$(this).parents('.bookmark').toggleClass('open');
 }
 })
+
+$('.bookmark').mouseenter(function(){
+	$(this).children('.overlay').css('visibility', 'visible');
+
+})
+$('.bookmark').mouseleave(function(){
+	$(this).children('.overlay').css('visibility', 'invisible');
+
+})
+
+// JQuery UI for Drag and Drop shit
+
+$(function() {
+
+    $( ".draggable" ).draggable({ revert: "invalid", helper: "clone" 
+
+});
+ 	
+    $( ".droppable" ).droppable({
+      activeClass: "ui-state-default",
+      hoverClass: "ui-state-hover",
+
+      drop: function( event, ui ) {
+      	var user_id = ui.draggable.children('.hidden-user').text();
+      	var title = ui.draggable.children('h4').text();
+      	var category = $( this ).text(); 
+      	var message = "user_id=" + user_id + "&category=" + category + "&title=" + title +"&message=hello&john=egal";
+        $( this )	
+          .addClass( "ui-state-highlight" )
+            .addClass( "dropped" );
+            $.post("saveDropped.php", message, function(data){
+            	
+            });
+      }
+    });
+  });
+
+
+
+
+
+
 
 });

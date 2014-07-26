@@ -22,11 +22,19 @@ if (empty($_POST) === false && empty($errors) === true) {
 }			
 ?>
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-3">
-			<?php include 'includes/widgets/category_list.php'; ?>
+<div id="wrapper">
+    <div id="sidebar-wrapper">
+		<div class="sidebar-nav">
+		
+				<?php include 'includes/widgets/category_list.php'; ?>
+		
 		</div>
+	</div>
+
+	<div id="page-content-wrapper">
+        <div class="page-content inset">
+         <div class="row">
+
 		<div class="col-md-6">
 
 			<h1> Add Category </h1>
@@ -38,13 +46,15 @@ if (empty($_POST) === false && empty($errors) === true) {
 				</div>
 				<div class="form-group">
 					<label for="description">Description</label>
-					<input type="text" class="form-control" name="description" id="description">
+					<textarea class="form-control" name="description" id="description" rows="3"></textarea>
 				</div>
 				<input type="submit" value="Kategorie hinzufügen" class="btn btn-primary">
 			</form>
 
 		</div>
 
+		</div>
+		</div>
 	</div>
 </div>
 
