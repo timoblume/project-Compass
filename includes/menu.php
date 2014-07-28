@@ -84,10 +84,10 @@
             
             <ul class="dropdown-menu" role="menu">
         
-            <li><a href="settings.php">Settings</a></li>
-            <li><a href="/lr/<?php echo $user_data['first_name'];?>">Profile</a></li>
-            <li><a href="finder.php">Find People</a></li>
-            <li><a href="help.php">Help</a></li>
+            <li><a href="settings.php">Einstellungen</a></li>
+            <li><a href="/lr/<?php echo $user_data['first_name'];?>">Profil</a></li>
+            <li><a href="finder.php">Freunde finden</a></li>
+            <li><a href="help.php">Hilfe</a></li>
             <li class="divider"></li>
             <li><a href="logout.php">Log out</a></li>
           </li>

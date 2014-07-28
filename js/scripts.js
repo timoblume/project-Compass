@@ -4,10 +4,20 @@ $("#login-form").hide();
 
   $("#login").click(function(){
 
+
+
    $("#register-form").hide();
    $("#login-form").show();
+   
+
 
   });
+
+
+
+
+
+
 
 // Insert tag name into value of input field
 
@@ -50,6 +60,11 @@ $(".bookmark-expand").click(function(){
 		$(this).toggleClass('glyphicon-chevron-up');
 
 		$(this).parents('.bookmark').toggleClass('open');
+
+    var full = $(this).parents('.bookmark').find('.full-description');
+    var excerpt = $(this).parents('.bookmark').find('.excerpt');
+    full.toggleClass('hide');
+    excerpt.toggleClass('hide');
 }
 })
 
@@ -61,6 +76,8 @@ $('.bookmark').mouseleave(function(){
 	$(this).children('.overlay').css('visibility', 'invisible');
 
 })
+
+
 
 // JQuery UI for Drag and Drop shit
 

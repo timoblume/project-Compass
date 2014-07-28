@@ -1,3 +1,38 @@
+.btn{
+		font-family: 'Lato', sans-serif;
+	font-weight:300;
+	font-size:1.2em;
+}
+
+.edit{
+		margin-top:20px;
+		width:100%;
+		height:50px;
+		border-radius: 15px;
+		padding-top:11px;
+}
+
+#register{
+		width:100%;
+		height:50px;
+		border-radius: 15px;
+	}
+	#twitter{
+		width:100%;
+		height:50px;
+		border-radius: 15px;
+		padding-top:11px;
+	}
+	#fill-oder{
+		font-size:1.2em;
+		text-align: center;
+	}
+	#login-jumbo{
+		width:100%;
+		height:50px;
+		border-radius: 15px;
+	}
+
 .ghost{
 	background-color:none;
 	border: 3px solid #fff;
@@ -46,6 +81,7 @@
 	border-radius: 5px;
 	border-top:none;
 	border-left:none;
+
 
 	&:hover{
 		background-color:$primary-color-dark;

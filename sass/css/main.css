@@ -6,7 +6,7 @@ body {
 h1, h2, h3, h4 {
   font-family: 'Cabin', sans-serif; }
 
-p.infotext, p.description {
+p.infotext, p.description, label {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 1.2em; }
@@ -57,12 +57,39 @@ p.infotext, p.description {
   padding-left: 100px;
   padding-right: 35px; }
 
+@media (max-width: 992px) {
+  .from-user {
+    float: left; }
+
+  .placeholder-medium {
+    height: 20px !important; }
+
+  .abo {
+    width: 100%;
+    margin-bottom: 20px; } }
 @media (max-width: 767px) {
-  #wrapper {
-    padding-left: 0; }
+  .inset {
+    padding-left: 50px;
+    padding-right: 28px; }
+
+  #page-content-wrapper {
+    clear: both; }
 
   #sidebar-wrapper {
-    left: 0; }
+    position: relative;
+    display: block;
+    overflow-y: visible;
+    width: 100%;
+    padding: 10px; }
+
+  .sidebar-nav {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    left: 0px; }
+
+  #wrapper {
+    padding-left: 0; }
 
   #wrapper.active {
     position: relative;
@@ -108,6 +135,32 @@ html, body {
   .navbar #notifications {
     font-size: 1.8em; }
 
+.navbar-default .navbar-toggle {
+  border-color: #fff;
+  color: #fff; }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff; }
+  .navbar-default .navbar-toggle:hover {
+    background-color: #ca424b; }
+
+.navbar-toggle {
+  z-index: 1000; }
+
+@media (max-width: 767px) {
+  .glyphicon-search {
+    display: none; }
+
+  img#logo {
+    display: none; }
+
+  input[name=keywords] {
+    width: 200px !important; }
+
+  .from-user {
+    float: left; } }
+@media (max-width: 1090px) {
+  img#logo {
+    display: none; } }
 .container.welcome {
   margin-top: 0px; }
 
@@ -154,6 +207,38 @@ html, body {
 .navbar-nav > li > a.dropdown-toggle {
   padding: 0px;
   margin-left: 20px; }
+
+.btn {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1.2em; }
+
+.edit {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 15px;
+  padding-top: 11px; }
+
+#register {
+  width: 100%;
+  height: 50px;
+  border-radius: 15px; }
+
+#twitter {
+  width: 100%;
+  height: 50px;
+  border-radius: 15px;
+  padding-top: 11px; }
+
+#fill-oder {
+  font-size: 1.2em;
+  text-align: center; }
+
+#login-jumbo {
+  width: 100%;
+  height: 50px;
+  border-radius: 15px; }
 
 .ghost {
   background-color: none;
@@ -222,13 +307,50 @@ html, body {
 .jumbotron {
   background-image: url("../../images/header.jpg");
   background-size: cover;
-  background-attachment: fixed;
   height: 600px;
   color: #fff; }
+  .jumbotron .form-horizontal .control-label {
+    margin-top: 5px; }
+  .jumbotron .form-control {
+    height: 50px;
+    border-radius: 15px; }
+  .jumbotron h2.jumbo-form {
+    margin-left: 80px;
+    margin-top: 47px;
+    margin-bottom: 27px; }
+  .jumbotron .agb-info {
+    font-size: 1.2em; }
+    .jumbotron .agb-info a {
+      text-decoration: underline;
+      color: #fff; }
 
 .form-control {
   background-color: rgba(255, 255, 255, 0.5);
   border: none; }
+  .form-control:focus {
+    border-color: transparent;
+    box-shadow: none; }
+
+.alert.alert-success {
+  height: 80px;
+  background-color: #f2dede;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  border-color: #f2dede;
+  padding-top: 28px; }
+  .alert.alert-success .download {
+    background-color: #f14e57;
+    border-right: 3px solid #ca424b;
+    border-bottom: 3px solid #ca424b;
+    border-top: none;
+    border-left: none;
+    height: 50px;
+    border-radius: 15px;
+    color: #fff;
+    width: 377px;
+    margin-top: -14px;
+    padding-top: 10px; }
 
 .form-control::-webkit-input-placeholder {
   color: grey; }
@@ -388,7 +510,7 @@ a.toPage {
   display: none; }
 
 .recent-tags {
-  height: 50px; }
+  display: block; }
 
 p.tag {
   float: left;
@@ -417,6 +539,42 @@ p.tag-filter {
   margin-right: 5px; }
   p.tag-filter:hover {
     cursor: pointer; }
+
+.person {
+  margin-right: 19px;
+  background-color: #fff;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-right: 3px solid #dddddd;
+  border-bottom: 3px solid #dddddd;
+  position: relative; }
+  .person .crop {
+    float: left;
+    margin-left: 20px;
+    margin-right: 10px; }
+  .person a {
+    margin-bottom: 20px;
+    margin-left: 80px; }
+
+.testimonial {
+  margin-top: 25px; }
+
+.testimonial-name {
+  margin-top: 20px;
+  margin-left: 30px; }
+
+.testimonial-age {
+  margin-top: -10px;
+  margin-left: 23px; }
+
+.profile-link {
+  margin-left: 0px !important; }
+
+.to-category {
+  color: #333; }
+  .to-category:hover {
+    color: #f14e57; }
 
 .landingpage-row {
   margin-bottom: 40px; }

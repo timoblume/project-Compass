@@ -11,7 +11,7 @@ if (isset($_GET['username']) === true && empty($_GET['username']) === false) {
 
 	?>
 
-		<div class="container">
+	<div class="container">
 			<div class="row">
 				<div class="col-md-6">
 				
@@ -36,12 +36,13 @@ if (isset($_GET['username']) === true && empty($_GET['username']) === false) {
 				</div>
 				
 			</div>
-			<div class="row">
+			
 
 			<?php
 				function get_categories(){
 						/*Check for Categories*/
 					global $user_id;
+					
 
 					$result = mysql_query("SELECT * FROM categories WHERE user_id = $user_id");
 
@@ -50,15 +51,30 @@ if (isset($_GET['username']) === true && empty($_GET['username']) === false) {
 
 
 				
-
+						$row_counter = 1;
+						$output = $output . "<div class='row'>";
 						while($row = mysql_fetch_array($result, MYSQL_ASSOC)){ 
+							
 							$output = $output . "<div class='col-md-3'>";
 							$output = $output . "<div class='category'>";
+							$output = $output . "<a class='to-category' href='category.php?id=" . $row['category_id'] . "'>";
 							$output = $output . "<h1>" . $row['title'] . "</h1>";
-							$output = $output . "<p>" . $row['description'] . "</p>";
+							$output = $output . "</a>";
+							
+							$describt = excerpt($row['description'], 150);
+							$output =  $output . "<p class='excerpt'>" . $describt . "</p>";
+
 							$output = $output . "<a href='#' class='btn btn-primary'>abonnieren</a>";
 							$output = $output . "</div>";
 							$output = $output . "</div>";
+
+								if($row_counter % 4 == 0){
+								$output =  $output . "</div>";
+
+								$output = $output . "<div class='row'>";
+							}
+
+							$row_counter++;
 						} 
 						
 					}else{
@@ -71,7 +87,8 @@ if (isset($_GET['username']) === true && empty($_GET['username']) === false) {
 				echo get_categories(); 
 
 			?>
-
+				</div>
+				</div>
 				</div>
 			</div>
 		</div>

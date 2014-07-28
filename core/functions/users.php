@@ -3,6 +3,19 @@
 function follow_user(){
 
 }
+
+function excerpt($text,$numb) {
+
+if (strlen($text) > $numb) {
+	  $text = substr($text, 0, $numb);
+	  $text = substr($text,0,strrpos($text," "));
+	  $etc = " ..."; 
+	  $text = $text.$etc;
+	  }
+	return $text;
+}
+
+
 function subscribtion_id_from_subscriber_id($user_id){
 	return mysql_result(mysql_query("SELECT `subscription_id` FROM `subscriptions` WHERE `subscriber_id` = '$user_id'"), 0, 'subscription_id');
 }

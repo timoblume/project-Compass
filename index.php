@@ -69,7 +69,7 @@ if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
 		<div class="response">
 		</div>
 		
-				<?php include 'includes/widgets/category_list.php'; ?>
+			<?php include 'includes/widgets/category_list.php'; ?>
 		
 		</div>
 	</div>
@@ -89,7 +89,7 @@ if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
 
 				global $user_data;
 
-
+				$row_counter = 2;
 
 				$id = $user_data['user_id'];
 
@@ -119,7 +119,10 @@ if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
 							$output =  $output . "<div class='hidden-user'>" . $profile_data['user_id'] . "</div>";
 							$output =  $output  . "</header>";
 							
-							$output =  $output . "<p>" . $row['description'] . "</p>";
+							$describt = excerpt($row['description'], 150);
+
+							$output =  $output . "<p class='excerpt'>" . $describt . "</p>";
+							$output =  $output . "<p class='full-description hide'>" . $row['description'] . "</p>";
 							$output =  $output . "</a>";
 							           
 							$output = $output . "</div>"; // end panel-heading
@@ -172,6 +175,12 @@ if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
 							$output =  $output . "</div>"; // end bookmark
 
 							$collapse_id++;
+
+							if($row_counter % 3 == 0){
+								$output =  $output . "</div>";
+								$output = $output . "<div class='row'>";
+							}
+							$row_counter++;
 
 				 	 		
 						}

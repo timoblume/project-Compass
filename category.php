@@ -29,60 +29,14 @@
         <div class="page-content inset">
          <div class="row">
 
-<div class="test">
-
-<?php
-/*--------------------------------------------------------------------------- test test test*/
-/*
-function check_tags(){
-
-
-if (isset($_GET["id"])) {
-		$category_id = $_GET["id"];
-	}else{
-		echo "something went wrong";
-	}
-
-$tags = mysql_query("SELECT tags FROM categories WHERE category_id = $category_id");
-	
-		
-		$output = "";
-		while ($row = mysql_fetch_array($tags, MYSQL_ASSOC)) {
-
-			$tag = trim($row['tags']);
-			$exploded = explode(' ', $tag);
-			foreach($exploded as $value){
-				
-			$result = mysql_query("SELECT * FROM bookmarks WHERE tags LIKE '% {$value} %' OR tags LIKE '%{$value} %' OR tags LIKE'% {$value}%'");
-
-				while ($rew = mysql_fetch_array($result, MYSQL_ASSOC)) {
-					 $output = $output . $rew['title'];
-
-
-				}
-				
-			}
-
-			
-		}
-
-
-		return $output;
-	}		
-	
-	echo check_tags();
-		*/
-/*--------------------------------------------------------------------------- test test test*/
-?>
-
-</div>
-
 
 <?php function outputting_bookmarks(){
 
 	/* Check GET ID*/
 
 	global $user_data;
+
+	$row_counter = 1;
 
 	if (isset($_GET["id"])) {
 		$category_id = $_GET["id"];
@@ -112,7 +66,7 @@ $tags = mysql_query("SELECT tags FROM categories WHERE category_id = $category_i
 	$output = $output . "</div>";
 	$output = $output . "<div class='col-md-4'>";
 	$output = $output . "<div class='placeholder-medium'></div>";
-	$output = $output . "<a href='#' class='btn btn-primary pull-right'>Abonnieren</a>";
+	$output = $output . "<a href='#' class='btn btn-primary pull-right abo'>Abonnieren</a>";
 	$output = $output . "</div>";
 	$output = $output . "</div>";
 
@@ -121,6 +75,8 @@ $tags = mysql_query("SELECT tags FROM categories WHERE category_id = $category_i
 	$tags = mysql_query("SELECT tags FROM bookmarks WHERE category = $category_id");
 	
 		$i = 0;
+		$output = $output  . "<div class='row'>";
+		$output = $output  . "<div class='col-md-8 col-sm-12 col-xs-12'>";
 		$output = $output  . "<div class='recent-tags'>";
 		while (($row = mysql_fetch_array($tags, MYSQL_ASSOC))) {
 			
@@ -144,6 +100,8 @@ $tags = mysql_query("SELECT tags FROM categories WHERE category_id = $category_i
 		}
 
 		$output = $output  . "</div>";
+		$output = $output  . "</div>";
+		$output = $output  . "</div>";
 
 	//Output all related Bookmarks
 
@@ -162,7 +120,13 @@ $tags = mysql_query("SELECT tags FROM categories WHERE category_id = $category_i
 		$output =  $output . "<header><h4>";
 		$output =  $output . "<img class='favicon' src='" . "http://www.google.com/s2/favicons?domain=" . $row['url'] . "'>" ;
 		$output =  $output  . $row['title'] . "</h4></header>";
-		$output =  $output . "<p>" . $row['description'] . "</p>";
+
+		// Get the excerpt of the describtion 
+
+		$describt = excerpt($row['description'], 150);
+
+		$output =  $output . "<p class='excerpt'>" . $describt . "</p>";
+		$output =  $output . "<p class='full-description hide'>" . $row['description'] . "</p>";
 		$output =  $output . "</a>";
 		
 		           
@@ -190,17 +154,20 @@ $tags = mysql_query("SELECT tags FROM categories WHERE category_id = $category_i
 					}
 					
 				}
-		$output =  $output . "<a href='#' class='btn btn-primary'>Tag hinzufügen</a>";
-		$output =  $output . "</div>";
 		
+		$output =  $output . "</div>";
+		$output =  $output . "<hr>";
+		$output =  $output . "<a href='#' class='btn btn-primary edit'>Bearbeiten</a>";
 		$output =  $output . "</div>"; // end panel-body
 		$output =  $output . "</div>"; // end panel-collapse in
 		$output =  $output . "</div>"; // end panel panel-default
 		$output =  $output . "</div>"; // end panel-group
+
 		$output =  $output . "<a data-toggle='collapse' data-parent='#accordion' href='#collapse-" . $collapse_id ."'>";
 		$output =  $output . "<span class='glyphicon glyphicon-chevron-down pull-right bookmark-expand'></span>";
 		$output =  $output . "</a>";
 		$output =  $output . "<hr>";
+
 		$output = $output . "<footer><div class='category-link'><a href='category.php?id=" . $category_data['category_id'] . "'> In " . $category_data['title'] . "</a></div>";
 
  	 		$output = $output .	"<div class='pull-right crop'>";
@@ -216,6 +183,12 @@ $tags = mysql_query("SELECT tags FROM categories WHERE category_id = $category_i
 		$output =  $output . "</div>"; // end bookmark
 
 		$collapse_id++;
+
+		if($row_counter % 3 == 0){
+			$output =  $output . "</div>";
+			$output = $output . "<div class='row'>";
+		}
+		$row_counter++;
 		
 		}
 

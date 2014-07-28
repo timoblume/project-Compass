@@ -1,0 +1,46 @@
+.person{
+	margin-right:19px;
+	background-color: #fff;
+	border-radius:15px;
+	margin-top:20px;
+	padding-top:20px;
+	border-right: 3px solid $drop-shadow-color;
+	border-bottom: 3px solid $drop-shadow-color;
+	position:relative;
+
+	.crop{
+		float:left;
+		margin-left:20px;
+		margin-right:10px;
+
+	}
+	a{
+		margin-bottom:20px;
+		margin-left:80px;
+	}
+}
+
+.testimonial{
+	margin-top:25px;
+
+}
+.testimonial-name{
+	margin-top:20px;
+	margin-left:30px;
+}
+.testimonial-age{
+	margin-top:-10px;
+	margin-left: 23px;
+}
+
+.profile-link{
+	margin-left:0px !important;
+}
+
+.to-category{
+	color:#333;
+
+	&:hover{
+		color:$primary-color;
+	}
+}

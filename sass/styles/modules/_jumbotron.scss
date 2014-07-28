@@ -1,15 +1,69 @@
 .jumbotron{
 	background-image:url('../../images/header.jpg');
 	background-size:cover;
-	background-attachment:fixed;
 	height:600px;
 	color:#fff;
+
+	.form-horizontal .control-label{
+		margin-top:5px;
+	}
+
+	.form-control{
+		height: 50px;
+		border-radius: 15px;
+	}
+
+	h2.jumbo-form{
+		margin-left: 80px;
+		margin-top: 47px;
+		margin-bottom: 27px;
+	}
+	.agb-info{
+		font-size:1.2em;
+		a{
+			text-decoration: underline;
+			color:#fff;
+		}
+	}
+
+	
 }
 
 .form-control{
 	background-color:rgba(255,255,255,.5);
 	border:none;
+	&:focus{
 
+	border-color:transparent;
+	box-shadow:none;
+	
+
+	}
+
+}
+
+.alert.alert-success{
+	height:80px;
+	background-color:#f2dede;
+	color:#333;
+	font-family: 'Lato', sans-serif;
+	font-weight:300;
+	border-color:#f2dede;
+	padding-top:28px;
+
+	.download{
+		background-color:$primary-color;
+		border-right: 3px solid $primary-color-dark;
+		border-bottom: 3px solid $primary-color-dark;
+		border-top:none;
+		border-left:none;
+		height:50px;
+		border-radius: 15px;
+		color:#fff;
+		width:377px;
+		margin-top: -14px;
+		padding-top:10px;
+	}
 }
 
 

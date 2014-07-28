@@ -25,6 +25,7 @@
 
     <script>
   $(function() {
+    
     $( "#category-list" ).sortable();
     $( "#category-list" ).disableSelection();
   });

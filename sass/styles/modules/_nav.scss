@@ -18,6 +18,48 @@
 	
 	}
 }
+.navbar-default .navbar-toggle{
+	border-color:#fff;
+	color:#fff;
+		.icon-bar{
+		background-color:#fff;
+	}
+	&:hover{
+		background-color:$primary-color-dark;
+	}
+}
+
+
+.navbar-toggle{
+	z-index:1000;
+}
+@media (min-width: 992px){
+	
+}
+
+@media (max-width:767px) {
+	.glyphicon-search{
+		display:none;
+	}
+	img#logo{
+		display:none;
+	}
+	input[name=keywords]{
+		width: 200px !important;
+	}
+
+	.from-user{
+		float: left;
+	}
+	
+
+}
+
+@media (max-width:1090px) {
+	img#logo{
+		display:none;
+	}
+}
 
 .container.welcome{
 	margin-top:0px;

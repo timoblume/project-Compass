@@ -4,7 +4,14 @@ logged_in_redirect();
 include 'includes/overall/header.php';
 ?>
 
-<h1>Recover</h1>
+
+
+	<div id="page-content-wrapper">
+        <div class="page-content inset">
+         <div class="row">
+
+
+         
 <?php
 if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
 ?>
@@ -23,16 +30,20 @@ if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
 			}
 		}
 	?>
-		
+		<div class="col-md-6">
+		<h1>Passwort zurücksetzen</h1>
 		<form action="" method="post">
-			<ul>
-				<li>
+			
+				<div class="form-group">
 					Please enter your email address:<br>
-					<input type="text" name="email">
-				</li>
-				<li><input type="submit" value="Recover"></li>
+					<input type="text" class="form-control" name="email">
+				</div>
+				<div class="form-group">
+					<input type="submit" class="btn btn-primary" value="Recover">
+				</div>
 			</ul>
 		</form>
+		</div>
 		
 	<?php
 	} else {
@@ -42,4 +53,9 @@ if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
 }
 ?>
 
-<?php include 'includes/overall/footer.php'; ?>
+
+</div>
+</div>
+</div>
+
+<?php include 'includes/footer.php'; ?>

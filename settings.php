@@ -23,8 +23,20 @@ if (empty($_POST) === false) {
 }
 
 ?>
-<div class="container">
-<h2>Hello, <?php echo $user_data['first_name']; ?>!</h2>
+<div id="wrapper">
+    <div id="sidebar-wrapper">
+		<div class="sidebar-nav">
+		
+				<?php include 'includes/widgets/category_list.php'; ?>
+		
+		</div>
+	</div>
+
+	<div id="page-content-wrapper">
+        <div class="page-content inset">
+
+
+<h2>Hallo, <?php echo $user_data['first_name']; ?>!</h2>
 
 <?php
 if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
@@ -64,22 +76,18 @@ if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
 			<label for="exampleInputEmail">Email</label>
 			<input type="text" class="form-control" name="email" id="exampleInputEmail" value="<?php echo $user_data['email']; ?>">
 		</div>
-		<div class="checkbox">
-		<label>
-			<input type="checkbox" name="allow_email" <?php if ($user_data['allow_email'] == 1) { echo 'checked="checked"'; } ?>> Would you like to receive email from us?
-		</label>
-		</div>
 		
-		<input type="submit" class="btn btn-default" value="Update">
+		
+		<input type="submit" class="btn btn-primary" value="Aktualisieren">
 	</form>
 	</div>
-	</div>
+	
 
 
 
 <?php
 } ?>
-	<div class="row">
+	
 		<div class="col-md-6">
 			<div class="profile">
 					<?php
@@ -113,12 +121,14 @@ if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
 						} ?>
 
 					<form action="" method="post" enctype="multipart/form-data">
-						<input type="file" name="profile"> <input type="submit">
+						<input type="file" name="profile"> <input type="submit" class="btn btn-primary">
 					</form>
 				</div>
 		</div>
-	</div>
-
+	
+</div>
+</div>
+</div>
 </div>
 
 <?php include 'includes/footer.php'; ?>
