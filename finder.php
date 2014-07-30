@@ -48,39 +48,57 @@
 
 			</div>
 		</div>
+		<div class="placeholder-small"></div>
+		<hr class="black">
 			<div class="row">
+			<div class="col-md-12">
 				<h1>Diese Leute sind beliebt auf Compass</h1>
+				</div>
 				<div class="col-md-4">
 					<div class="person">
 						<div class="crop">
-							<img src="images/placeholder-img.jpg" class="img-circle">
+							<img src="images/personas/1.jpg" class="img-circle">
 
 						</div>
-						<h4>Max Mustermann</h4>
-							<p>124 Abonneten</p> 
+						<h4>Daniela W.</h4>
+							<p>24 Abonneten</p> 
 						<a href="#" class="btn btn-primary">Abonnieren</a>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="person">
 						<div class="crop">
-							<img src="images/placeholder-img.jpg" class="img-circle">
+							<img src="images/personas/2.jpg" class="img-circle">
 
 						</div>
-						<h4>Max Mustermann</h4>
-							<p>124 Abonneten</p>
+						<h4>Max A.</h4>
+							<p>46 Abonneten</p>
 							<a href="#" class="btn btn-primary">Abonnieren</a> 
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="person">
 						<div class="crop">
-							<img src="images/placeholder-img.jpg" class="img-circle">
+							<img src="images/personas/3.jpg" class="img-circle">
 
 						</div>
-						<h4>Max Mustermann</h4>
-							<p>124 Abonneten</p> 
+						<h4>Steffen D.</h4>
+							<p>71 Abonneten</p> 
 							<a href="#" class="btn btn-primary">Abonnieren</a>
+					</div>
+				</div>
+			
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="person">
+						<div class="crop">
+							<img src="images/personas/4.jpg" class="img-circle">
+
+						</div>
+						<h4>Jonas H.</h4>
+							<p>32 Abonneten</p> 
+						<a href="#" class="btn btn-primary">Abonnieren</a>
 					</div>
 				</div>
 			

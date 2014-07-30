@@ -30,8 +30,18 @@
 }
 
 .form-control{
+	height:50px;
+	border-radius: 15px;
+	border-top:3px solid #ddd;
+	border-left:3px solid #ddd;
+	border-right:none;
+	border-bottom:none;
 	background-color:rgba(255,255,255,.5);
-	border:none;
+	
+	font-family: 'Lato', sans-serif;
+		font-weight:300;
+		font-size:1.2em;
+
 	&:focus{
 
 	border-color:transparent;
@@ -40,6 +50,11 @@
 
 	}
 
+}
+
+.form-control.register{
+	border-top:none;
+	border-left:none;
 }
 
 .alert.alert-success{

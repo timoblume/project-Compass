@@ -79,8 +79,8 @@ if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
          <div class="row">
          <div class='col-lg-4 col-md-4 col-sm-12 friend-finder'>
          	<h4> Dein Newsfeed ist noch relativ leer...</h4>
-         	<a href="finder.php" class="btn btn-primary">Jetzt Freunde finden <i class="fa fa-search"></i></a>
-         	<a href="finder.php" class="btn btn-primary">Freunde einladen <i class="fa fa-envelope"></i></a>
+         	<a href="finder.php" id="find-friends">Jetzt Freunde finden <i class="fa fa-search"></i></a>
+         	<a href="finder.php" class="btn btn-primary" id="invite">Freunde einladen <i class="fa fa-envelope"></i></a>
          </div>
 
 			<?php function outputting_subscriber_bookmarks(){

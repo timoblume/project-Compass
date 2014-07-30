@@ -9,6 +9,13 @@
 	border-bottom: 3px solid $drop-shadow-color;
 	position:relative;
 
+	.panel.panel-default{
+		min-height:189px;
+	}
+
+
+
+
 	.favicon{
 		margin-right:10px;
 	}
@@ -41,7 +48,7 @@
 	border-right: 3px solid $drop-shadow-color;
 	border-bottom: 3px solid $drop-shadow-color;
 	margin-top:20px;
-	height:150px;
+	height:170px;
 	background-color: #fff;
 	border-radius:15px;
 	padding-top:10px;
@@ -50,6 +57,22 @@
 	a{
 		margin-bottom:10px;
 	}
+	h4{
+		margin-bottom:40px;
+	}
+}
+
+#find-friends{
+	width:100%;
+	text-align: center;
+	margin-bottom:5px;
+	font-size: 1.2em;
+	margin-left:60px;
+}
+
+#invite{
+	width: 100%;
+	margin-top: 11px;
 }
 
 .hidden-user{
@@ -101,10 +124,10 @@ a.toPage{
 	border-right: 5px solid $secondary-color;
 	border-bottom: 5px solid $secondary-color;
 	transition: all 0.4s ease 0s;
-	margin-right:-30px;
-	margin-bottom:-200px;
+	margin-right:-84px;
+	margin-bottom:-500px;
 	z-index:5000;
-	width: 35%;
+	width: 40%;
 }
 
 .tags{

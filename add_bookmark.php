@@ -16,7 +16,7 @@ include 'includes/overall/header.php';
         <div class="page-content inset">
          <div class="row">
 
-<h1>Add a Bookmark</h1>
+
 
 
 <?php
@@ -48,6 +48,7 @@ if (empty($_POST) === false && empty($errors) === true) {
 
 
 		<div class="col-md-5">
+		<h1>Add a Bookmark</h1>
 			<form action="" method="post" role="form">
 				<div class="form-group">
 					<label for="url">URL:</label>
@@ -85,6 +86,7 @@ if (empty($_POST) === false && empty($errors) === true) {
 					output_tags($user_data['user_id']);
 				 ?>
 				 </div>
+				 <div class="placeholder-large"></div>
 				
 				<input type="submit" value="Save Bookmark" class="btn btn-primary">
 				

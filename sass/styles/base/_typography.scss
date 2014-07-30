@@ -12,3 +12,25 @@ p.infotext, p.description, label{
 	font-weight:300;
 	font-size:1.2em;
 }
+p.excerpt, .full-description{
+		font-family: 'Lato', sans-serif;
+		font-weight:300;
+		font-size:1.2em;
+	}
+a{
+	font-family: 'Lato', sans-serif;
+	font-weight:300;
+	
+}
+.category-link a{
+	font-size:1.2em;
+}
+
+a.profile-link{
+	font-family: 'Cabin', sans-serif;
+	color:#333;
+}
+
+hr.black{
+	border-top: 1px solid #ddd;
+}

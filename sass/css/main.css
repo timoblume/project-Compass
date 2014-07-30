@@ -11,6 +11,25 @@ p.infotext, p.description, label {
   font-weight: 300;
   font-size: 1.2em; }
 
+p.excerpt, .full-description {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1.2em; }
+
+a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300; }
+
+.category-link a {
+  font-size: 1.2em; }
+
+a.profile-link {
+  font-family: 'Cabin', sans-serif;
+  color: #333; }
+
+hr.black {
+  border-top: 1px solid #ddd; }
+
 .category-title {
   float: left;
   margin-right: 10px; }
@@ -241,7 +260,7 @@ html, body {
   border-radius: 15px; }
 
 .ghost {
-  background-color: none;
+  background-color: rgba(255, 255, 255, 0.2);
   border: 3px solid #fff;
   color: #fff; }
   .ghost:hover {
@@ -325,11 +344,23 @@ html, body {
       color: #fff; }
 
 .form-control {
+  height: 50px;
+  border-radius: 15px;
+  border-top: 3px solid #ddd;
+  border-left: 3px solid #ddd;
+  border-right: none;
+  border-bottom: none;
   background-color: rgba(255, 255, 255, 0.5);
-  border: none; }
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1.2em; }
   .form-control:focus {
     border-color: transparent;
     box-shadow: none; }
+
+.form-control.register {
+  border-top: none;
+  border-left: none; }
 
 .alert.alert-success {
   height: 80px;
@@ -405,6 +436,8 @@ ul#category-list {
   border-right: 3px solid #dddddd;
   border-bottom: 3px solid #dddddd;
   position: relative; }
+  .bookmark .panel.panel-default {
+    min-height: 189px; }
   .bookmark .favicon {
     margin-right: 10px; }
   .bookmark hr {
@@ -425,13 +458,26 @@ ul#category-list {
   border-right: 3px solid #dddddd;
   border-bottom: 3px solid #dddddd;
   margin-top: 20px;
-  height: 150px;
+  height: 170px;
   background-color: #fff;
   border-radius: 15px;
   padding-top: 10px;
   margin-right: 19px; }
   .friend-finder a {
     margin-bottom: 10px; }
+  .friend-finder h4 {
+    margin-bottom: 40px; }
+
+#find-friends {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  margin-left: 60px; }
+
+#invite {
+  width: 100%;
+  margin-top: 11px; }
 
 .hidden-user {
   display: none; }
@@ -470,10 +516,10 @@ a.toPage {
   border-right: 5px solid #818181;
   border-bottom: 5px solid #818181;
   transition: all 0.4s ease 0s;
-  margin-right: -30px;
-  margin-bottom: -200px;
+  margin-right: -84px;
+  margin-bottom: -500px;
   z-index: 5000;
-  width: 35%; }
+  width: 40%; }
 
 .tags {
   margin-bottom: 20px; }
@@ -556,6 +602,9 @@ p.tag-filter {
   .person a {
     margin-bottom: 20px;
     margin-left: 80px; }
+
+.person.left {
+  margin-left: -15px; }
 
 .testimonial {
   margin-top: 25px; }

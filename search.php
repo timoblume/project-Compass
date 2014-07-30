@@ -1,8 +1,18 @@
 <?php include 'core/init.php';?>
 <?php $website_title = "Willkommen bei Compass!"; ?> 
 <?php include 'includes/overall/header.php'; ?>
-<div class="container">
-	<div class="row">
+<div id="wrapper">
+    <div id="sidebar-wrapper">
+		<div class="sidebar-nav">
+		
+			<?php include 'includes/widgets/category_list.php'; ?>
+		
+		</div>
+	</div>
+
+	<div id="page-content-wrapper">
+        <div class="page-content inset">
+         <div class="row">
 		
 			<h1>Leute</h1>
 	
@@ -26,7 +36,7 @@
 						<div class="result">
 
 								<div class="col-md-4">
-									<div class="person">
+									<div class="person left">
 										<div class="crop">
 														<?php if (empty($row['profile']) === false){ 
 						                      echo '<img class="img img-responsive img-circle" src="' , $row['profile'],'" alt="',  $row['first_name'], '\'s Profile Image">';
@@ -316,11 +326,11 @@ echo search_bookmarks();
 
 
 
-
-
-
+</div>
+</div>
+</div>
 </div>
 
-</div>	
+
 
 <?php include 'includes/footer.php'; ?>
